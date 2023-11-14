@@ -1,738 +1,754 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-const App = ()=> {
+import './App.css'
+function App() {
+
   return (
     <>
-      <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <div className="navbar navbar-expand-lg bg-light navbar-light">
-            <div className="container-fluid">
-                <a href="index.html" className="navbar-brand">DevFolio</a>
-                <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+<div>
+  <a href="components.html" className="btn btn-primary btn-component" data-spy="affix" data-offset-top={600}><i className="ti-shift-left-alt" /> Components</a>
+  <header className="header">
+    <div className="container">
+      <ul className="social-icons pt-3">
+        <li className="social-item"><a className="social-link text-light" href="#"><i className="ti-facebook" aria-hidden="true" /></a></li>
+        <li className="social-item"><a className="social-link text-light" href="#"><i className="ti-twitter" aria-hidden="true" /></a></li>
+        <li className="social-item"><a className="social-link text-light" href="#"><i className="ti-google" aria-hidden="true" /></a></li>
+        <li className="social-item"><a className="social-link text-light" href="#"><i className="ti-instagram" aria-hidden="true" /></a></li>
+        <li className="social-item"><a className="social-link text-light" href="#"><i className="ti-github" aria-hidden="true" /></a></li>
+      </ul>  
+      <div className="header-content">
+        <h4 className="header-subtitle">Hello, I am</h4>
+        <h1 className="header-title">Jofan Kaligis</h1>
+        <h6 className="header-mono">Frond end Designer | Developer</h6>
+        <button className="btn btn-primary btn-rounded"><i className="ti-printer pr-2" />Print Resume</button>
+      </div>
+    </div>
+  </header>
+  <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top={510}>
+    <div className="container">
+      <button className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon" />
+      </button>
+      <div className="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <a href="#home" className="nav-link">Home</a>
+          </li>
+          <li className="nav-item">
+            <a href="#about" className="nav-link">About</a>
+          </li>
+          <li className="nav-item">
+            <a href="#resume" className="nav-link">Resume</a>
+          </li>
+        </ul>
+        <ul className="navbar-nav brand">
+          <img src="src/assets/imgs/jofan1.jpg" alt className="brand-img" />
+          <li className="brand-txt">
+            <h5 className="brand-title">Jofan Kaligis</h5>
+            <div className="brand-subtitle">Web Designer | Developer</div>
+          </li>
+        </ul>
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <a href="#portfolio" className="nav-link">Portfolio</a>
+          </li>
+          <li className="nav-item">
+            <a href="#blog" className="nav-link">Blog</a>
+          </li>
+          <li className="nav-item last-item">
+            <a href="#contact" className="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div className="container-fluid">
+    <div id="about" className="row about-section">
+      <div className="col-lg-4 about-card">
+        <h3 className="font-weight-light">Who am I ?</h3>
+        <span className="line mb-5" />
+        <h5 className="mb-3">Mahasiswa Fakultas Ilmu Komputer Universitas Klabat</h5>
+        <p className="mt-20">Universitas Klabat (UNKLAB) didirikan dengan nama Perguruan Tinggi Klabat (PTK) yang dibina dan diawasi oleh Gereja Masehi Advent Hari Ketujuh (GMAHK) melalui Yayasan Perguruan Tinggi Klabat yang berlokasi di Kecamatan Airmadidi, Minahasa, Sulawesi Utara.</p>
+        <button className="btn btn-outline-danger"><i className="icon-down-circled2 " />Download My CV</button>
+      </div>
+      <div className="col-lg-4 about-card">
+        <h3 className="font-weight-light">Personal Info</h3>
+        <span className="line mb-5" />
+        <ul className="mt40 info list-unstyled">
+          <li><span>Birthdate</span> : 06/15/2002</li>
+          <li><span>Email</span> : Jofan Erlich Kaligis</li>
+          <li><span>Phone</span> : +(62) 83152166347</li>
+          <li><span>Skype</span> : Jofan_kaligis </li>
+          <li><span>Address</span> :  Airmadidi, Indoneisia</li>
+        </ul>
+        <ul className="social-icons pt-3">
+          <li className="social-item"><a className="social-link" href="#"><i className="ti-facebook" aria-hidden="true" /></a></li>
+          <li className="social-item"><a className="social-link" href="#"><i className="ti-twitter" aria-hidden="true" /></a></li>
+          <li className="social-item"><a className="social-link" href="#"><i className="ti-google" aria-hidden="true" /></a></li>
+          <li className="social-item"><a className="social-link" href="#"><i className="ti-instagram" aria-hidden="true" /></a></li>
+          <li className="social-item"><a className="social-link" href="#"><i className="ti-github" aria-hidden="true" /></a></li>
+        </ul>  
+      </div>
+      <div className="col-lg-4 about-card">
+        <h3 className="font-weight-light">My Expertise</h3>
+        <span className="line mb-5" />
+        <div className="row">
+          <div className="col-1 text-danger pt-1"><i className="ti-widget icon-lg" /></div>
+          <div className="col-10 ml-auto mr-3">
+            <h6>UX Design</h6>
+            <p className="subtitle"> exercitat Repellendus,  corrupt.</p>
+            <hr />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-1 text-danger pt-1"><i className="ti-paint-bucket icon-lg" /></div>
+          <div className="col-10 ml-auto mr-3">
+            <h6>Web Development</h6>
+            <p className="subtitle">Lorem ipsum dolor sit consectetur.</p>
+            <hr />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-1 text-danger pt-1"><i className="ti-stats-up icon-lg" /></div>
+          <div className="col-10 ml-auto mr-3">
+            <h6>Digital Marketing</h6>
+            <p className="subtitle">voluptate commodi illo voluptatib.</p>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/*Resume Section*/}
+  <section className="section" id="resume">
+    <div className="container">
+      <h2 className="mb-5"><span className="text-danger">My</span> Resume</h2>
+      <div className="row">
+        <div className="col-md-6 col-lg-4">
+          <div className="card">
+            <div className="card-header">
+              <div className="mt-2">
+                <h4>Expertise</h4>
+                <span className="line" />  
+              </div>
+            </div>
+            <div className="card-body">
+              <h6 className="title text-danger">2017 - Present</h6>
+              <p>UX Developer</p>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</p>
+              <hr />
+              <h6 className="title text-danger">2016 - 2017</h6>
+              <p>Front-end Developer</p>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</p>
+              <hr />
+              <h6 className="title text-danger">2015 - 2016</h6>
+              <p>UX Designer</p>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-4">
+          <div className="card">
+            <div className="card-header">
+              <div className="mt-2">
+                <h4>Education</h4>
+                <span className="line" />  
+              </div>
+            </div>
+            <div className="card-body">
+              <h6 className="title text-danger">2017 - Present</h6>
+              <p>B.E Computer Engineering</p>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error corrupti recusandae obcaecati odit repellat ducimus cum, minus tempora aperiam at.</p>
+              <hr />
+              <h6 className="title text-danger">2016 - 2017</h6>
+              <p>Diploma in Computer Engineering</p>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, id officiis quas placeat quia voluptas dolorum rem animi nostrum quae.aliquid repudiandae saepe!.</p>
+              <hr />
+              <h6 className="title text-danger">2015 - 2016</h6>
+              <p>High School Degree</p>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4">
+          <div className="card">
+            <div className="card-header">
+              <div className="pull-left">
+                <h4 className="mt-2">Skills</h4>
+                <span className="line" />  
+              </div>
+            </div>
+            <div className="card-body pb-2">
+              <h6>hTL5 &amp; CSS3</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '97%'}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+              <h6>JavaScript</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '85%'}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+              <h6>PHP</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '80%'}} aria-valuenow={50} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+              <h6>SQL</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '90%'}} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+              <h6>Laborum</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '90%'}} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+              <h6>Tempora</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '90%'}} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-header">
+              <div className="pull-left">
+                <h4 className="mt-2">Languages</h4>
+                <span className="line" />  
+              </div>
+            </div>
+            <div className="card-body pb-2">
+              <h6>English</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '80%'}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+              <h6>French</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '45%'}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+              <h6>Spanish</h6>
+              <div className="progress mb-3">
+                <div className="progress-bar bg-danger" role="progressbar" style={{width: '67%'}} aria-valuenow={50} aria-valuemin={0} aria-valuemax={100} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section className="section bg-dark text-center">
+    <div className="container">
+      <div className="row text-center">
+        <div className="col-md-6 col-lg-3">
+          <div className="row ">
+            <div className="col-5 text-right text-light border-right py-3">
+              <div className="m-auto"><i className="ti-alarm-clock icon-xl" /></div>
+            </div>
+            <div className="col-7 text-left py-3">
+              <h1 className="text-danger font-weight-bold font40">500</h1>
+              <p className="text-light mb-1">Hours Worked</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-3">
+          <div className="row">
+            <div className="col-5 text-right text-light border-right py-3">
+              <div className="m-auto"><i className="ti-layers-alt icon-xl" /></div>
+            </div>
+            <div className="col-7 text-left py-3">
+              <h1 className="text-danger font-weight-bold font40">50K</h1>
+              <p className="text-light mb-1">Project Finished</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-3">
+          <div className="row">
+            <div className="col-5 text-right text-light border-right py-3">
+              <div className="m-auto"><i className="ti-face-smile icon-xl" /></div>
+            </div>
+            <div className="col-7 text-left py-3">
+              <h1 className="text-danger font-weight-bold font40">200K</h1>
+              <p className="text-light mb-1">Happy Clients</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-3">
+          <div className="row">
+            <div className="col-5 text-right text-light border-right py-3">
+              <div className="m-auto"><i className="ti-heart-broken icon-xl" /></div>
+            </div>
+            <div className="col-7 text-left py-3">
+              <h1 className="text-danger font-weight-bold font40">2k</h1>
+              <p className="text-light mb-1">Coffee Drinked</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section className="section" id="service">
+    <div className="container">
+      <h2 className="mb-5 pb-4"><span className="text-danger">My</span> Services</h2>
+      <div className="row">
+        <div className="col-md-4 col-sm-6">
+          <div className="card mb-5">
+            <div className="card-header has-icon">
+              <i className="ti-vector text-danger" aria-hidden="true" />
+            </div>
+            <div className="card-body px-4 py-3">
+              <h5 className="mb-3 card-title text-dark">Ullam</h5>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6">
+          <div className="card mb-5">
+            <div className="card-header has-icon">
+              <i className="ti-write text-danger" aria-hidden="true" />
+            </div>
+            <div className="card-body px-4 py-3">
+              <h5 className="mb-3 card-title text-dark">Asperiores</h5>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6">
+          <div className="card mb-5">
+            <div className="card-header has-icon">
+              <i className="ti-package text-danger" aria-hidden="true" />
+            </div>
+            <div className="card-body px-4 py-3">
+              <h5 className="mb-3 card-title text-dark">Tempora</h5>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6">
+          <div className="card mb-5">
+            <div className="card-header has-icon">
+              <i className="ti-map-alt text-danger" aria-hidden="true" />
+            </div>
+            <div className="card-body px-4 py-3">
+              <h5 className="mb-3 card-title text-dark">Provident</h5>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6">
+          <div className="card mb-5">
+            <div className="card-header has-icon">
+              <i className="ti-bar-chart text-danger" aria-hidden="true" />
+            </div>
+            <div className="card-body px-4 py-3">
+              <h5 className="mb-3 card-title text-dark">Consectetur</h5>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6">
+          <div className="card mb-5">
+            <div className="card-header has-icon">
+              <i className="ti-support text-danger" aria-hidden="true" />
+            </div>
+            <div className="card-body px-4 py-3">
+              <h5 className="mb-3 card-title text-dark">Veritatis</h5>
+              <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section className="section bg-custom-gray" id="price">
+    <div className="container">
+      <h1 className="mb-5"><span className="text-danger">Packs</span> Pricing</h1>
+      <div className="row align-items-center">
+        <div className="col-md-6 col-lg-3">
+          <div className="price-card text-center mb-4">
+            <h3 className="price-card-title">Free</h3>
+            <div className="price-card-cost">
+              <sup className="ti-money" />
+              <span className="num">0</span>
+              <span className="date">MO</span>
+            </div>
+            <ul className="list">
+              <li className="list-item">5 <span className="text-muted">Project</span></li>
+              <li className="list-item">1GB <span className="text-muted">Storage</span></li>
+              <li className="list-item"><span className="text-muted">No Domain</span></li>
+              <li className="list-item">1 <span className="text-muted">User</span></li>
+            </ul>
+            <button className="btn btn-primary btn-rounded w-lg">Subscribe</button>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-3">
+          <div className="price-card text-center mb-4">
+            <h3 className="price-card-title">Basic</h3>
+            <div className="price-card-cost">
+              <sup className="ti-money" />
+              <span className="num">10</span>
+              <span className="date">MO</span>
+            </div>
+            <ul className="list">
+              <li className="list-item">50 <span className="text-muted">Project</span></li>
+              <li className="list-item">10GB <span className="text-muted">Storage</span></li>
+              <li className="list-item">1<span className="text-muted">Domain</span></li>
+              <li className="list-item">5 <span className="text-muted">User</span></li>
+            </ul>
+            <button className="btn btn-primary btn-rounded w-lg">Subscribe</button>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-3">
+          <div className="price-card text-center price-card-requried mb-4">
+            <h3 className="price-card-title">Exclusive</h3>
+            <div className="price-card-cost">
+              <sup className="ti-money" />
+              <span className="num">25</span>
+              <span className="date">MO</span>
+            </div>
+            <ul className="list">
+              <li className="list-item">150 <span className="text-muted">Project</span></li>
+              <li className="list-item">15GB <span className="text-muted">Storage</span></li>
+              <li className="list-item">5<span className="text-muted"> Domain</span></li>
+              <li className="list-item">15<span className="text-muted">User</span></li>
+            </ul>
+            <button className="btn btn-primary btn-rounded w-lg">Subscribe</button>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-3">
+          <div className="price-card text-center mb-4">
+            <h3 className="price-card-title">Pro</h3>
+            <div className="price-card-cost">
+              <sup className="ti-money" />
+              <span className="num">99</span>
+              <span className="date">MO</span>
+            </div>
+            <ul className="list">
+              <li className="list-item">500 <span className="text-muted">Project</span></li>
+              <li className="list-item">1000GB <span className="text-muted">Storage</span></li>
+              <li className="list-item">10<span className="text-muted"> Domain</span></li>
+              <li className="list-item">Unlimite<span className="text-muted">User</span></li>
+            </ul>
+            <button className="btn btn-primary btn-rounded w-lg">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section className="section bg-dark py-5">
+    <div className="container text-center">
+      <h2 className="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
+      <button className="btn bg-primary w-lg">Hire me</button>
+    </div>
+  </section>
+  {/* Portfolio Section */}
+  <section className="section bg-custom-gray" id="portfolio">
+    <div className="container">
+      <h1 className="mb-5"><span className="text-danger">My</span> Portfolio</h1>
+      <div className="portfolio">
+        <div className="filters">
+          <a href="#" data-filter=".new" className="active">
+            New
+          </a>
+          <a href="#" data-filter=".advertising">
+            Advertising
+          </a>
+          <a href="#" data-filter=".branding">
+            Branding
+          </a>
+          <a href="#" data-filter=".web">
+            Web
+          </a>
+        </div>
+        <div className="portfolio-container"> 
+          <div className="col-md-6 col-lg-4 web new">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/web-1.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/web-1.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">WEB</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>   
+            </div>             
+          </div>
+          <div className="col-md-6 col-lg-4 web new">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/web-2.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/web-2.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">WEB</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div> 
+            </div>                         
+          </div>
+          <div className="col-md-6 col-lg-4 advertising new">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/advertising-2.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />                         
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/advertising-2.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">ADVERSTISING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>    
+            </div>              
+          </div> 
+          <div className="col-md-6 col-lg-4 web">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/web-4.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/web-4.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">WEB</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>                                                     
+          </div>
+          <div className="col-md-6 col-lg-4 advertising"> 
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/advertising-1.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />                               
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/advertising-1.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">ADVERSITING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>                                                       
+          </div> 
+          <div className="col-md-6 col-lg-4 web new">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/web-3.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />  
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/web-3.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">WEB</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>                                                     
+          </div>
+          <div className="col-md-6 col-lg-4 advertising new">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/advertising-3.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />       
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/advertising-3.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">ADVERSITING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>                                                       
+          </div> 
+          <div className="col-md-6 col-lg-4 advertising new"> 
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/advertising-4.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />            
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/advertising-4.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">ADVERTISING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div className="col-md-6 col-lg-4 branding new">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/branding-1.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />                        
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/branding-1.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">BRANDING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div> 
+            </div>
+          </div> 
+          <div className="col-md-6 col-lg-4 branding">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/branding-2.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />  
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/branding-2.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">BRANDING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>                                                     
+          </div> 
+          <div className="col-md-6 col-lg-4 branding new">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/branding-3.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />   
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/branding-3.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">BRANDING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>                                                    
+          </div> 
+          <div className="col-md-6 col-lg-4 branding">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/branding-4.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />                      
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/branding-4.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">BRANDING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>                                                      
+          </div> 
+          <div className="col-md-6 col-lg-4 branding">
+            <div className="portfolio-item">
+              <img src="src/assets/imgs/branding-5.jpg" className="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates" />          
+              <div className="content-holder">
+                <a className="img-popup" href="assets/imgs/branding-5.jpg" />
+                <div className="text-holder">
+                  <h6 className="title">BRANDING</h6>
+                  <p className="subtitle">Expedita corporis doloremque velit in totam!</p>
+                </div>
+              </div>
+            </div>                                                   
+          </div>
+        </div> 
+      </div>  
+    </div>            
+  </section>
+  {/* End of portfolio section */}
+  <section className="section" id="blog">
+    <div className="container">
+      <h2 className="mb-5">Latest <span className="text-danger">News</span></h2>
+      <div className="row">
+        <div className="blog-card">
+          <div className="img-holder">
+            <img src="src/assets/imgs/blog1.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" />
+          </div>
+          <div className="content-holder">
+            <h6 className="title">Consectetur adipisicing elit</h6>
+            <p className="post-details">
+              <a href="#">By: Admin</a>
+              <a href="#"><i className="ti-heart text-danger" /> 234</a>
+              <a href="#"><i className="ti-comment" /> 123</a>
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nesciunt qui sit velit delectus voluptates, repellat ipsum culpa id deleniti. Rerum debitis facilis accusantium neque numquam mollitia modi quasi distinctio.</p>
+            <p><b>Necessitatibus nihil impedit! Ex nisi eveniet, dolor aliquid consequuntur repudiandae.</b></p>
+            <p>Magnam in repellat enim harum omnis aperiam! Explicabo illo, commodi, dolor blanditiis cupiditate harum nisi vero accusamus laudantium voluptatibus dolores quae obcaecati.</p>
+            <a href="#" className="read-more">Read more <i className="ti-angle-double-right" /></a>
+          </div>
+        </div>{/* end of blog wrapper */}
+        {/* blog-card */}
+        <div className="blog-card">
+          <div className="img-holder">
+            <img src="src/assets/imgs/blog2.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" />
+          </div>
+          <div className="content-holder">
+            <h6 className="title">Explicabo illo</h6>
+            <p className="post-details">
+              <a href="#">By: Admin</a>
+              <a href="#"><i className="ti-heart text-danger" /> 456</a>
+              <a href="#"><i className="ti-comment" /> 264</a>
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit excepturi laborum enim, vitae ipsam atque eum, ad iusto consequuntur voluptas, esse doloribus. Perferendis porro quisquam vitae exercitationem aliquid, minus eos laborum repudiandae, cumque debitis iusto omnis praesentium? Laborum placeat sit adipisci illum tempore maxime, esse qui quae? Molestias excepturi corporis similique doloribus. Esse vitae earum architecto nulla non dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum facere, delectus eum commodi soluta distinctio sit repudiandae possimus sunt. Ipsum, rem.</p>
+            <a href="#" className="read-more">Read more <i className="ti-angle-double-right" /></a>
+          </div>
+        </div>{/* end of blog wrapper */}
+        {/* blog-card */}
+        <div className="blog-card">
+          <div className="img-holder">
+            <img src="src/assets/imgs/blog3.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" />
+          </div>
+          <div className="content-holder">
+            <h4 className="title">Porro Quisqua</h4>
+            <p className="post-details">
+              <a href="#">By: Admin</a>
+              <a href="#"><i className="ti-heart text-danger" /> 431</a>
+              <a href="#"><i className="ti-comment" /> 312</a>
+            </p>
+            <p> consectetur adipisicing elit. Impedit excepturi laborum enim, vitae ipsam atque eum, ad iusto consequuntur voluptas, esse doloribus. Perferendis porro quisquam vitae exercitationem aliquid, minus eos laborum repudiandae, cumque debitis iusto omnis praesentium? Laborum placeat sit adipisci illum tempore maxime, esse qui quae? Molestias excepturi corporis similique doloribus. Esse vitae earum architecto nulla non dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum facere, delectus eum commodi soluta distinctio sit repudiandae possimus sunt. Ipsum, rem.</p>
+            <a href="#" className="read-more">Read more <i className="ti-angle-double-right" /></a>
+          </div>
+        </div>{/* end of blog wrapper */}
+      </div>
+    </div>
+  </section>
+  <div className="section contact" id="contact">
+    <div id="map" className="map" />
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-8">
+          <div className="contact-form-card">
+            <h4 className="contact-title">Send a message</h4>
+            <form action>
+              <div className="form-group">
+                <input className="form-control" type="text" placeholder="Name *" required />
+              </div>
+              <div className="form-group">
+                <input className="form-control" type="email" placeholder="Email *" required />
+              </div>
+              <div className="form-group">
+                <textarea className="form-control" id=" placeholder="  rows={7} required defaultValue={""} />
+              </div>
+              <div className="form-group ">
+                <button type="submit" className="form-control btn btn-primary">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div className="col-lg-4">
+          <div className="contact-info-card">
+            <h4 className="contact-title">Get in touch</h4>
+            <div className="row mb-2">
+              <div className="col-1 pt-1 mr-1">
+                <i className="ti-mobile icon-md" />
+              </div>
+              <div className="col-10 ">
+                <h6 className="d-inline">Phone : <br /> <span className="text-muted">+ (123) 456-789</span></h6>
+              </div>
+            </div>
+            <div className="row mb-2">
+              <div className="col-1 pt-1 mr-1">
+                <i className="ti-map-alt icon-md" />
+              </div>
+              <div className="col-10">
+                <h6 className="d-inline">Address :<br /> <span className="text-muted">12345 Fake ST NoWhere AB Country.</span></h6>
+              </div>
+            </div>
+            <div className="row mb-2">
+              <div className="col-1 pt-1 mr-1">
+                <i className="ti-envelope icon-md" />
+              </div>
+              <div className="col-10">
+                <h6 className="d-inline">Email :<br /> <span className="text-muted">info@website.com</span></h6>
+              </div>
+            </div>
+            <ul className="social-icons pt-4">
+              <li className="social-item"><a className="social-link text-dark" href="#"><i className="ti-facebook" aria-hidden="true" /></a></li>
+              <li className="social-item"><a className="social-link text-dark" href="#"><i className="ti-twitter" aria-hidden="true" /></a></li>
+              <li className="social-item"><a className="social-link text-dark" href="#"><i className="ti-google" aria-hidden="true" /></a></li>
+              <li className="social-item"><a className="social-link text-dark" href="#"><i className="ti-instagram" aria-hidden="true" /></a></li>
+              <li className="social-item"><a className="social-link text-dark" href="#"><i className="ti-github" aria-hidden="true" /></a></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer className="footer py-3">
+    <div className="container">
+      <p className="small mb-0 text-light">
+        ©  Created With <i className="ti-heart text-danger" /> By <a href="http://devcrud.com" target="_blank"><span className="text-danger" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a> 
+      </p>
+    </div>
+  </footer>
+  {/* core  */}
+  {/* bootstrap 3 affix */}
+  {/* Isotope  */}
+  {/* Google mpas */}
+  {/* JohnDoe js */}
+</div>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div className="navbar-nav ml-auto">
-                        <a href="#home" className="nav-item nav-link active">Home</a>
-                        <a href="#about" className="nav-item nav-link">About</a>
-                        <a href="#service" className="nav-item nav-link">Service</a>
-                        <a href="#experience" className="nav-item nav-link">Experience</a>
-                        <a href="#portfolio" className="nav-item nav-link">Portfolio</a>
-                        <a href="#price" className="nav-item nav-link">Price</a>
-                        <a href="#review" className="nav-item nav-link">Review</a>
-                        <a href="#team" className="nav-item nav-link">Team</a>
-                        <a href="#blog" className="nav-item nav-link">Blog</a>
-                        <a href="#contact" className="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div class="hero" id="home">
-            <div className="container-fluid">
-                <div className="row align-items-center">
-                    <div className="col-sm-12 col-md-6">
-                        <div className="hero-content">
-                            <div className="hero-text">
-                                <p>I'm</p>
-                                <h1>Jofan Kaligis</h1>
-                                <h2></h2>
-                                <div className="typed-text">Web Design, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
-                            </div>
-                            <div className="hero-btn">
-                                <a class="btn" href="">Hire Me</a>
-                                <a class="btn" href="">Contact Me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-12 col-md-6 d-none d-md-block">
-                        <div className="hero-image">
-                            <img src="src/assets/img/hero.png" alt="Hero Image"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-            <div className="container-fluid">
-                <div className="row align-items-center">
-                    <div className="col-lg-6">
-                        <div className="about-img">
-                            <img src="img/about.jpg" alt="Image"/>
-                        </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="about-content">
-                            <div className="section-header text-left">
-                                <p>Learn About Me</p>
-                                <h2>10 Years Experience</h2>
-                            </div>
-                            <div className="about-text">
-                                <p>
-                                    Saya adalah Seorang Mahasiswa yang berkuliah di Universitas Klabat dan memiliki pengalaman dalam berbagai bidang Komputer
-                                </p>
-                            </div>
-                            <div className="skills">
-                                <div className="skill-name">
-                                    <p>Web Design</p><p>85%</p>
-                                </div>
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div className="skill-name">
-                                    <p>Web Development</p><p>95%</p>
-                                </div>
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div className="skill-name">
-                                    <p>Apps Design</p><p>90%</p>
-                                </div>
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div className="skill-name">
-                                    <p>Apps Development</p><p>85%</p>
-                                </div>
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <a class="btn" href="">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div class="service" id="service">
-            <div className="container">
-                <div className="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>What I do</p>
-                    <h2>Awesome Quality Services</h2>
-                </div>
-                <div className="row">
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div className="service-item">
-                            <div className="service-icon">
-                                <i className="fa fa-laptop"></i>
-                            </div>
-                            <div className="service-text">
-                                <h3>Web Design</h3>
-                                <p>
-                                    Merancang layout secara visual dengan menyalurkan ide-ide kreatif di setiap elemen yang ada di website, memberi warna, memilih jenis huruf, menempatkan gambar dan lainya. Mengkonversi layout visual ke dalam bentuk HTML dan CSS untuk memastikan bisa dijalankan di web browser.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div className="service-item">
-                            <div className="service-icon">
-                                <i className="fa fa-laptop-code"></i>
-                            </div>
-                            <div className="service-text">
-                                <h3>Web Development</h3>
-                                <p>
-                                    membangun website yang responsif di berbagai perangkat. Artinya, tampilan dan fungsi tersebut harus kompatibel sesuai ukuran layar. Tampilan desain yang adaptif dengan berbagai macam device bisa meningkatkan user experience, sehingga ada peluang mendorong conversion.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div className="service-item">
-                            <div className="service-icon">
-                                <i className="fab fa-android"></i>
-                            </div>
-                            <div className="service-text">
-                                <h3>Apps Design</h3>
-                                <p>
-                                    merancang sebuah mobile apps yang bertujuan untuk menghasilkan desain menarik tapi juga fungsional.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div className="service-item">
-                            <div className="service-icon">
-                                <i className="fab fa-apple"></i>
-                            </div>
-                            <div className="service-text">
-                                <h3>Apps Development</h3>
-                                <p>
-                                    bertugas membuat dan mengembangkan suatu program atau aplikasi sebagai solusi IT melalui suatu bahasa pemrograman tertentu, dan memastikan kualitas dari aplikasi yang dikembangkan agar sesuai dengan standar kebutuhan yang telah ditetapkan.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="experience" id="experience">
-            <div className="container">
-                <header className="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Resume</p>
-                    <h2>Working Experience</h2>
-                </header>
-                <div className="timeline">
-                    <div className="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div className="timeline-text">
-                            <div className="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Universitas Klabat</h4>
-                            <p>
-                                belajar dan membuat projek
-                            </p>
-                        </div>
-                    </div>
-                    <div className="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div className="timeline-text">
-                            <div className="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Universitas Klabat</h4>
-                            <p>
-                                belajar dan membuat projek
-                            </p>
-                        </div>
-                    </div>
-                    <div className="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div className="timeline-text">
-                            <div className="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Universitas Klabat</h4>
-                            <p>
-                                belajar dan membuat projek
-                            </p>
-                        </div>
-                    </div>
-                    <div className="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div className="timeline-text">
-                            <div className="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Universitas Klabat</h4>
-                            <p>
-                                belajar dan membuat projek
-                            </p>
-                        </div>
-                    </div>
-                    <div className="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div className="timeline-text">
-                            <div className="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Universitas Klabat</h4>
-                            <p>
-                                belajar dan membuat projek
-                            </p>
-                        </div>
-                    </div>
-                    <div className="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div className="timeline-text">
-                            <div className="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Universitas Klabat</h4>
-                            <p>
-                                belajar dan membuat projek
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div className="banner wow zoomIn" data-wow-delay="0.1s">
-            <div className="container">
-                <div className="section-header text-center">
-                    <p>Reasonable Price</p>
-                    <h2>Get A <span>Special</span> Price</h2>
-                </div>
-                <div className="container banner-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
-                    </p>
-                    <a className="btn">Pricing Plan</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="portfolio" id="portfolio">
-            <div className="container">
-                <div className="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Portfolio</p>
-                    <h2>My Excellent Portfolio</h2>
-                </div>
-                <div className="row">
-                    <div className="col-12">
-                        <ul id="portfolio-filter">
-                            <li data-filter="*" className="filter-active">All</li>
-                            <li data-filter=".filter-1">Web Design</li>
-                            <li data-filter=".filter-2">Mobile Apps</li>
-                            <li data-filter=".filter-3">Game Dev</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="row portfolio-container">
-                    <div className="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                        <div className="portfolio-wrap">
-                            <div className="portfolio-img">
-                                <img src="img/portfolio-1.jpg" alt="Image"/>
-                            </div>
-                            <div className="portfolio-text">
-                                <h3>eCommerce Website</h3>
-                                <a class="btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                        <div className="portfolio-wrap">
-                            <div className="portfolio-img">
-                                <img src="img/portfolio-2.jpg" alt="Image"/>
-                            </div>
-                            <div className="portfolio-text">
-                                <h3>Product Landing Page</h3>
-                                <a class="btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div className="portfolio-wrap">
-                            <div className="portfolio-img">
-                                <img src="img/portfolio-3.jpg" alt="Image"/>
-                            </div>
-                            <div className="portfolio-text">
-                                <h3>JavaScript quiz game</h3>
-                                <a class="btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
-                        <div className="portfolio-wrap">
-                            <div className="portfolio-img">
-                                <img src="img/portfolio-4.jpg" alt="Image"/>
-                            </div>
-                            <div className="portfolio-text">
-                                <h3>JavaScript drawing</h3>
-                                <a class="btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                        <div className="portfolio-wrap">
-                            <div className="portfolio-img">
-                                <img src="img/portfolio-5.jpg" alt="Image"/>
-                            </div>
-                            <div className="portfolio-text">
-                                <h3>Social Mobile Apps</h3>
-                                <a class="btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
-                        <div className="portfolio-wrap">
-                            <div className="portfolio-img">
-                                <img src="img/portfolio-6.jpg" alt="Image"/>
-                            </div>
-                            <div className="portfolio-text">
-                                <h3>Company Website</h3>
-                                <a class="btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-   
-        <div className="banner wow zoomIn" data-wow-delay="0.1s">
-            <div className="container">
-                <div className="section-header text-center">
-                    <p>Awesome Discount</p>
-                    <h2>Get <span>30%</span> Discount</h2>
-                </div>
-                <div className="container banner-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
-                    </p>
-                    <a className="btn">Order Now</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="price" id="price">
-            <div className="container">
-                <div className="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Pricing Plan</p>
-                    <h2>Affordable Price</h2>
-                </div>
-                <div className="row">
-                    <div className="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div className="price-item">
-                            <div className="price-header">
-                                <div className="price-title">
-                                    <h2>Basic</h2>
-                                </div>
-                                <div className="price-prices">
-                                    <h2><small>$</small>49<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div className="price-body">
-                                <div className="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="price-footer">
-                                <div className="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
-                        <div className="price-item featured-item">
-                            <div className="price-header">
-                                <div className="price-title">
-                                    <h2>Standard</h2>
-                                </div>
-                                <div className="price-prices">
-                                    <h2><small>$</small>99<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div className="price-body">
-                                <div className="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="price-footer">
-                                <div className="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div className="price-item">
-                            <div className="price-header">
-                                <div className="price-title">
-                                    <h2>Premium</h2>
-                                </div>
-                                <div className="price-prices">
-                                    <h2><small>$</small>149<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div className="price-body">
-                                <div className="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="price-footer">
-                                <div className="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
-            <div className="container">
-                <div className="testimonial-icon">
-                    <i className="fa fa-quote-left"></i>
-                </div>
-                <div className="owl-carousel testimonials-carousel">
-                    <div className="testimonial-item">
-                        <div className="testimonial-img">
-                            <img src="img/testimonial-1.jpg" alt="Image"/>
-                        </div>
-                        <div className="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div className="testimonial-item">
-                        <div className="testimonial-img">
-                            <img src="img/testimonial-2.jpg" alt="Image"/>
-                        </div>
-                        <div className="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div className="testimonial-item">
-                        <div className="testimonial-img">
-                            <img src="img/testimonial-3.jpg" alt="Image"/>
-                        </div>
-                        <div className="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      
-        <div class="team" id="team">
-            <div className="container">
-                <div className="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Team</p>
-                    <h2>Expert Team Members</h2>
-                </div>
-                <div className="row">
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div className="team-item">
-                            <div className="team-img">
-                                <img src="img/team-1.jpg" alt="Image"/>
-                            </div>
-                            <div className="team-text">
-                                <h2>Mollie Ross</h2>
-                                <h4>Web Designer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div className="team-social">
-                                    <a className="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div className="team-item">
-                            <div className="team-img">
-                                <img src="img/team-2.jpg" alt="Image"/>
-                            </div>
-                            <div className="team-text">
-                                <h2>Dylan Adams</h2>
-                                <h4>Web Developer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div className="team-social">
-                                    <a className="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div className="team-item">
-                            <div className="team-img">
-                                <img src="img/team-3.jpg" alt="Image"/>
-                            </div>
-                            <div className="team-text">
-                                <h2>Jennifer Page</h2>
-                                <h4>Apps Designer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div className="team-social">
-                                    <a className="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div className="team-item">
-                            <div className="team-img">
-                                <img src="img/team-4.jpg" alt="Image"/>
-                            </div>
-                            <div className="team-text">
-                                <h2>Josh Dunn</h2>
-                                <h4>Apps Developer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div className="team-social">
-                                    <a className="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a className="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-md-4"></div>
-                        <div className="col-md-8">
-                            <div className="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" noValidate="novalidate">
-                                    <div className="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p className="help-block"></p>
-                                    </div>
-                                    <div className="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p className="help-block"></p>
-                                    </div>
-                                    <div className="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p className="help-block"></p>
-                                    </div>
-                                    <div className="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p className="help-block"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="blog" id="blog">
-            <div className="container">
-                <div className="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>From Blog</p>
-                    <h2>Latest Articles</h2>
-                </div>
-                <div className="row">
-                    <div className="col-lg-6">
-                        <div className="blog-item wow fadeInUp" data-wow-delay="0.1s">
-                            <div className="blog-img">
-                                <img src="img/blog-1.jpg" alt="Blog"/>
-                            </div>
-                            <div className="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div className="blog-meta">
-                                    <p><i className="far fa-user"></i>Admin</p>
-                                    <p><i className="far fa-list-alt"></i>Web Design</p>
-                                    <p><i className="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i className="far fa-comments"></i>5</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a className="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="blog-item wow fadeInUp" data-wow-delay="0.3s">
-                            <div className="blog-img">
-                                <img src="img/blog-2.jpg" alt="Blog"/>
-                            </div>
-                            <div className="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div className="blog-meta">
-                                    <p><i className="far fa-user"></i>Admin</p>
-                                    <p><i className="far fa-list-alt"></i>Apps Design</p>
-                                    <p><i className="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i className="far fa-comments"></i>10</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a className="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div className="footer wow fadeIn" data-wow-delay="0.3s">
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="footer-info">
-                        <h2>Kate Winslet</h2>
-                        <h3>123 Street, New York, USA</h3>
-                        <div className="footer-menu">
-                            <p>+012 345 67890</p>
-                            <p>info@example.com</p>
-                        </div>
-                        <div className="footer-social">
-                            <a href=""><i className="fab fa-twitter"></i></a>
-                            <a href=""><i className="fab fa-facebook-f"></i></a>
-                            <a href=""><i className="fab fa-youtube"></i></a>
-                            <a href=""><i className="fab fa-instagram"></i></a>
-                            <a href=""><i className="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div className="container copyright">
-                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                </div>
-            </div>
-        </div>
-       
-        <a href="#" className="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        
-       
-        <div id="loader" className="show">
-            <div className="loader"></div>
-        </div>
-
-        
-       
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-       
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
-
-      
-        <script src="js/main.js"></script>
-    </body>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
